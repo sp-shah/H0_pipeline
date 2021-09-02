@@ -1,0 +1,3 @@
+FUNCTION NumToString, Number
+   RETURN, STRTRIM(STRING(Number),2)
+END

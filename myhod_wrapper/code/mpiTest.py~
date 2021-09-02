@@ -1,0 +1,40 @@
+import numpy as np
+from mpi4py import MPI
+import sys
+comm = MPI.COMM_WORLD
+rank = comm.Get_rank()
+size = comm.Get_size()
+
+
+dictOrig = dict(one=[1,1], two=[2,2])
+comm.Barrier()
+
+dictOrig["one"] = [[rank,rank], [100+rank, 100+rank]]
+dictOrig["two"] = [[rank, rank], [100+rank, 100+rank]]
+
+comm.Barrier()
+
+#if rank ==0:
+#    hodIndices = np.arange(11)
+#else:
+#    hodIndices = None
+#hodIndices = comm.scatter(hodIndices, root = 0)
+hodIndices = np.arange(11)
+perrank = len(hodIndices)//size
+hodInd = hodIndices[rank*perrank:(rank+1)*perrank]
+print(rank, hodInd)
+
+'''
+
+for key in dictOrig:
+    dictOrig[key] = np.array(comm.gather(dictOrig[key], root =0))
+    
+
+
+if rank ==0:
+    for key in dictOrig:
+        dictOrig[key] = np.concatenate(dictOrig[key])
+        #dictOrig[key] = np.append(dictOrig[key], dictOrig["one"], axis=0)
+        print(dictOrig[key])
+    
+'''

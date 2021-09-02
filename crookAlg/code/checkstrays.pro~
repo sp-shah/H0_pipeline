@@ -1,0 +1,16 @@
+PRO checkstrays, groupid, cat_groupid, cat_ra, cat_dec, cat_hvel, cat_dis, cat_kmag
+  
+  ;collect the indices of all the strays
+  w = where(groupid eq 0)
+  print, n_elements(w)
+  print, cat_groupid(w(0:2))
+  print, cat_ra(w(0:2))
+  print, cat_dec(w(0:2))
+  print, cat_hvel(w(0:2))
+  print, cat_dis(w(0:2))
+  print, cat_kmag(w(0:2))
+ 
+  
+
+  
+end

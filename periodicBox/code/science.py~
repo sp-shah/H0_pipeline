@@ -1,0 +1,14 @@
+import sci_funcdef as fd
+
+
+
+
+
+def main():
+    fd.ratios()
+
+
+
+
+if __name__ == "__main__":
+    main()

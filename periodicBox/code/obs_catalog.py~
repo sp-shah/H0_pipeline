@@ -1,0 +1,16 @@
+#The set of functions in this code will help obtain the ra, dec and 
+#recessional velocity of the observational 2MRS catalog
+
+def main():
+
+    #read the text file 
+
+    #build a dictionary 
+    
+    #save the dictionary quantities to a file
+
+
+
+
+if __name__ == "__main__":
+    main()

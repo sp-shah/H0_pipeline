@@ -1,0 +1,14 @@
+
+
+
+def mw_lg(vel):
+    ###########################################################333
+    # This function definition will shift the velocity vectors to 
+    # the local group frame of reference (http://adsabs.harvard.edu/abs/1999AJ....118..337C)
+    # The shift is performed in cartesian coordinates
+    # Return: 3D shifted vel array cartesian coordinates
+    #
+    #################################################################
+
+
+def 

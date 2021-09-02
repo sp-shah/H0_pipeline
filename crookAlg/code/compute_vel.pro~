@@ -1,0 +1,7 @@
+; the goal of this script is to try to obtain the value 
+; that LIGO obtained in their paper
+
+
+Pro compute_vel 
+
+  vel = []
